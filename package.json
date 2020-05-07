@@ -1,0 +1,25 @@
+{
+  "name": "drivemapper",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "bin": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "nodemon": "cd dist && nodemon --inspect",
+    "tscwatch": "npx tsc -w --skipLibCheck",
+    "dev": "npm-run-all --parallel tscwatch nodemon",
+    "build": "npx tsc --skipLibCheck && npx pkg -t win .",
+    "testrun": ".\\drivemapper.exe"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "pkg": "^4.4.2"
+  },
+  "devDependencies": {
+    "@types/mocha": "^5.2.7",
+    "@types/node": "^12.6.8",
+    "typescript": "^3.7.2"
+  }
+}
